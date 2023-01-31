@@ -2,10 +2,9 @@ package server
 
 import (
 	"flag"
+	"go-videochat-conference/internal/handlers"
 	"os"
 	"time"
-
-	"go-videochat-conference/handlers"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -15,7 +14,7 @@ import (
 )
 
 var (
-	addr = flag.String("addr : ", os.Getenv("PORT"), "")
+	addr = flag.String("addr", ":"+os.Getenv("PORT"), "")
 	cert = flag.String("cert", "", "")
 	key  = flag.String("key", "", "")
 )
